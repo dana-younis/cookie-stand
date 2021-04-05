@@ -97,6 +97,25 @@ function makingHeader() {
 makingHeader();
 
 
+// function finallRow() {
+//     let footer= document.createElement('footer');
+//     tableElement.appendChild(footer);
+//     let row= footer.insertRow(0)
+
+
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
 Cookies.prototype.rander= function () {
 
     let shopRow = document.createElement('tr');
@@ -105,6 +124,12 @@ Cookies.prototype.rander= function () {
     let firstd = document.createElement('td');
     shopRow.appendChild(firstd);
     firstd.textContent = this.localName;
+
+    
+   
+    
+  
+
     for (let i= 0; i< hours.length; i++) {
         // multiplyrandomcoustmer
         let elements = document.createElement('td');
@@ -118,7 +143,10 @@ Cookies.prototype.rander= function () {
         finaltd.textContent = this.total;
 
 
+        
+
 }
+
 
     
 
