@@ -1,69 +1,72 @@
 'use strict';
 
-
-let hours = ['6am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',]
+const hours = ['6am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm',]
 function randomNumber(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
 
 
 
 
 let Seattle = {
-    maxSeattle: 23,
-    minSeattle: 65,
-    avgSeattle: 6.3,
-    randomcoustmerSeattle: [],
-    multiplyrandomcoustmerSeattle: [],
-    totalSeattle: 0,
-    list: [],
+    localName:'Seattle',
+    maxCoustomer: 23,
+    minCoustomer: 65,
+    avgCookies: 6.3,
+    randomcoustmer: [],
+    multiplyrandomcoustmer: [],
+    total: 0,
+   
 
 
 
-    GitRandomcoustmerSeattle: function () {
-        for (let i = 0; i < hours.length; i++) { this.randomcoustmerSeattle.push(randomNumber(this.minSeattle, this.maxSeattle)); }
-        console.log(this.randomcoustmerSeattle);
+    GitRandomcoustmer: function () {
+        for (let i = 0; i < hours.length; i++) { this.randomcoustmer.push(randomNumber(this.minCoustomer, this .  maxCoustomer)); }
+        console.log(this.randomcoustmer);
     },
 
 
 
-    GitMultiplyrandomcoustmerSeattle: function () {
-        for (let i = 0; i < this.randomcoustmerSeattle.length; i++) { this.multiplyrandomcoustmerSeattle.push(Math.floor(this.randomcoustmerSeattle[i] * this.avgSeattle)); }
-        console.log(this.multiplyrandomcoustmerSeattle);
+    GitMultiplyrandomcoustmer: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) { this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies)); }
+        console.log(this.multiplyrandomcoustmer);
     },
 
 
 
 
-    gitTotalSeattle: function () {
-        for (let i = 0; i < this.randomcoustmerSeattle.length; i++) {
+    gitTotal: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) {
 
-            this.totalSeattle = this.totalSeattle + this.randomcoustmerSeattle[i]
+            this.total = this.total + this.randomcoustmer[i]
         }
     },
 
 
-    gitList: function () {
+     rander: function () {
+         let parent = document.getElementById('parent');
+        //  let h3 =document.createElementNS('h3');
+        //  parent.appendChild(h3);
+        //  h3.textContent=(`${this.localName}`);
 
-        let ul = document.createElement('ul');
+        
+
+         let ul = document.createElement('ul');
+         parent.appendChild(ul);
 
         //  Seattle.appendChild(ul)
 
         for (let i = 0; i < hours.length; i++) {
 
-            // if (i=13){
-
-            //     console.log(Seattle.li.textContent=(`total ${Seattle.totalSeattle}`));
-            // }
-            // else {
+            
             let li = document.createElement('li');
             ul.appendChild(li);
 
-            li.textContent = (` ${hours[i]}:${Seattle.multiplyrandomcoustmerSeattle[i]} cookies 
+            li.textContent = (` ${hours[i]}:${Seattle.multiplyrandomcoustmer[i]} cookies 
                       `);
-            console.log(li);
-
-
-
-        }
+            console.log(li); }
+            
+            // let totalli =document.createElementNS('li');
+            // ul.appendChild(totalli);
+            // totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -71,10 +74,10 @@ let Seattle = {
 }
 
 
-Seattle.GitRandomcoustmerSeattle();
-Seattle.GitMultiplyrandomcoustmerSeattle();
-Seattle.gitTotalSeattle();
-Seattle.gitList();
+Seattle.GitRandomcoustmer();
+Seattle.GitMultiplyrandomcoustmer();
+Seattle.gitTotal();
+Seattle.rander();
 console.log(Seattle);
 
 
@@ -89,64 +92,67 @@ console.log(Seattle);
 
 
 
+let Tokyo = {
+    localName:'Tokyo',
+    maxCoustomer: 24,
+    minCoustomer:3,
+    avgCookies: 1.2,
+    randomcoustmer: [],
+    multiplyrandomcoustmer: [],
+    total: 0,
+   
 
-let tokyo  = {
-    maxTokyo: 24,
-    minTokyo: 3,
-    avgTokyo: 1.2,
-    randomcoustmerTokyo: [],
-    multiplyrandomcoustmerTokyo: [],
-    totalTokyo: 0,
-    list: [],
 
 
-
-    GitRandomcoustmerTokyo: function () {
-        for (let i = 0; i < hours.length; i++) { this.randomcoustmerTokyo.push(randomNumber(this.minTokyo, this.maxTokyo)); }
-        console.log(this.randomcoustmerTokyo);
+    GitRandomcoustmer: function () {
+        for (let i = 0; i < hours.length; i++) { this.randomcoustmer.push(randomNumber(this.minCoustomer, this .  maxCoustomer)); }
+        console.log(this.randomcoustmer);
     },
 
 
 
-    GitMultiplyrandomcoustmerTokyo: function () {
-        for (let i = 0; i < this.randomcoustmerTokyo.length; i++) { this.multiplyrandomcoustmerTokyo.push(Math.floor(this.randomcoustmerTokyo[i] * this.avgTokyo)); }
-        console.log(this.multiplyrandomcoustmerTokyo);
+    GitMultiplyrandomcoustmer: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) { this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies)); }
+        console.log(this.multiplyrandomcoustmer);
     },
 
 
 
 
-    gitTotalTokyo: function () {
-        for (let i = 0; i < this.randomcoustmerTokyo.length; i++) {
+    gitTotal: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) {
 
-            this.totalTokyo = this.totalTokyo + this.randomcoustmerTokyo[i]
+            this.total = this.total + this.randomcoustmer[i]
         }
     },
 
 
-    gitList: function () {
+     rander: function () {
+         let parent = document.getElementById('parent');
+        //  let h3 =document.createElementNS('h3');
+        //  parent.appendChild(h3);
+        //  h3.textContent=(`${this.localName}`);
 
-        let ul = document.createElement('ul');
+        
+
+         let ul = document.createElement('ul');
+         parent.appendChild(ul);
 
         //  Seattle.appendChild(ul)
 
         for (let i = 0; i < hours.length; i++) {
 
-            // if (i=13){
-
-            //     console.log(Seattle.li.textContent=(`total ${Seattle.totalSeattle}`));
-            // }
-            // else {
+            
             let li = document.createElement('li');
             ul.appendChild(li);
 
-            li.textContent = (` ${hours[i]}:${tokyo.multiplyrandomcoustmerTokyo[i]} cookies 
+            li.textContent = (` ${hours[i]}:${Tokyo.multiplyrandomcoustmer[i]} cookies 
                       `);
-            console.log(li);
-
-
-
-        }
+            console.log(li); }
+            
+            // let totalli =document.createElementNS('li');
+            // ul.appendChild(totalli);
+            // totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -154,11 +160,11 @@ let tokyo  = {
 }
 
 
-tokyo.GitRandomcoustmerTokyo();
-tokyo.GitMultiplyrandomcoustmerTokyo();
-tokyo.gitTotalTokyo();
-tokyo.gitList();
-console.log(tokyo);
+Tokyo.GitRandomcoustmer();
+Tokyo.GitMultiplyrandomcoustmer();
+Tokyo.gitTotal();
+Tokyo.rander();
+console.log(Tokyo);
 
 
 
@@ -172,71 +178,68 @@ console.log(tokyo);
 
 
 
+let Dubai = {	
+   
+    localName:'Dubai',
+    maxCoustomer: 38,
+    minCoustomer: 11,
+    avgCookies: 1.2,
+    randomcoustmer: [],
+    multiplyrandomcoustmer: [],
+    total: 0,
+   
 
 
 
-
-
-
-
-
-let Dubai  = {
-    maxDubai: 38,
-    minDubai: 11,
-    avgDubai: 3.7,
-    randomcoustmerDubai: [],
-    multiplyrandomcoustmerDubai: [],
-    totalDubai: 0,
-    list: [],
-
-
-
-    GitRandomcoustmerDubai: function () {
-        for (let i = 0; i < hours.length; i++) { this.randomcoustmerDubai.push(randomNumber(this.minDubai, this.maxDubai)); }
-        console.log(this.randomcoustmerDubai);
+    GitRandomcoustmer: function () {
+        for (let i = 0; i < hours.length; i++) { this.randomcoustmer.push(randomNumber(this.minCoustomer, this .  maxCoustomer)); }
+        console.log(this.randomcoustmer);
     },
 
 
 
-    GitMultiplyrandomcoustmerDubai: function () {
-        for (let i = 0; i < this.randomcoustmerDubai.length; i++) { this.multiplyrandomcoustmerDubai.push(Math.floor(this.randomcoustmerDubai[i] * this.avgDubai)); }
-        console.log(this.multiplyrandomcoustmerDubai);
+    GitMultiplyrandomcoustmer: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) { this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies)); }
+        console.log(this.multiplyrandomcoustmer);
     },
 
 
 
 
-    gitTotalDubai: function () {
-        for (let i = 0; i < this.randomcoustmerDubai.length; i++) {
+    gitTotal: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) {
 
-            this.totalDubai = this.totalDubai + this.randomcoustmerDubai[i]
+            this.total = this.total + this.randomcoustmer[i]
         }
     },
 
 
-    gitList: function () {
+     rander: function () {
+         let parent = document.getElementById('parent');
+        //  let h3 =document.createElementNS('h3');
+        //  parent.appendChild(h3);
+        //  h3.textContent=(`${this.localName}`);
 
-        let ul = document.createElement('ul');
+        
+
+         let ul = document.createElement('ul');
+         parent.appendChild(ul);
 
         //  Seattle.appendChild(ul)
 
         for (let i = 0; i < hours.length; i++) {
 
-            // if (i=13){
-
-            //     console.log(Seattle.li.textContent=(`total ${Seattle.totalSeattle}`));
-            // }
-            // else {
+            
             let li = document.createElement('li');
             ul.appendChild(li);
 
-            li.textContent = (` ${hours[i]}:${Dubai.multiplyrandomcoustmerDubai[i]} cookies 
+            li.textContent = (` ${hours[i]}:${Dubai.multiplyrandomcoustmer[i]} cookies 
                       `);
-            console.log(li);
-
-
-
-        }
+            console.log(li); }
+            
+            // let totalli =document.createElementNS('li');
+            // ul.appendChild(totalli);
+            // totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -244,10 +247,10 @@ let Dubai  = {
 }
 
 
-Dubai.GitRandomcoustmerDubai();
-Dubai.GitMultiplyrandomcoustmerDubai();
-Dubai.gitTotalDubai();
-Dubai.gitList();
+Dubai.GitRandomcoustmer();
+Dubai.GitMultiplyrandomcoustmer();
+Dubai.gitTotal();
+Dubai.rander();
 console.log(Dubai);
 
 
@@ -260,73 +263,67 @@ console.log(Dubai);
 
 
 
+let  Paris= {
+    localName:'Paris',
+    maxCoustomer: 38,
+    minCoustomer:20,
+    avgCookies: 2.3,
+    randomcoustmer: [],
+    multiplyrandomcoustmer: [],
+    total: 0,
+   
 
 
 
-
-
-
-
-
-
-
-let  Paris = {
-    maxParis: 38,
-    minParis: 20,
-    avgParis: 2.3,
-    randomcoustmerParis: [],
-    multiplyrandomcoustmerParis: [],
-    totalParis: 0,
-    list: [],
-
-
-
-    GitRandomcoustmerParis: function () {
-        for (let i = 0; i < hours.length; i++) { this.randomcoustmerParis.push(randomNumber(this.minParis, this.maxParis)); }
-        console.log(this.randomcoustmerParis);
+    GitRandomcoustmer: function () {
+        for (let i = 0; i < hours.length; i++) { this.randomcoustmer.push(randomNumber(this.minCoustomer, this .  maxCoustomer)); }
+        console.log(this.randomcoustmer);
     },
 
 
 
-    GitMultiplyrandomcoustmerParis: function () {
-        for (let i = 0; i < this.randomcoustmerParis.length; i++) { this.multiplyrandomcoustmerParis.push(Math.floor(this.randomcoustmerParis[i] * this.avgParis)); }
-        console.log(this.multiplyrandomcoustmerParis);
+    GitMultiplyrandomcoustmer: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) { this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies)); }
+        console.log(this.multiplyrandomcoustmer);
     },
 
 
 
 
-    gitTotalParis: function () {
-        for (let i = 0; i < this.randomcoustmerParis.length; i++) {
+    gitTotal: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) {
 
-            this.totalParis = this.totalParis + this.randomcoustmerParis[i]
+            this.total = this.total + this.randomcoustmer[i]
         }
     },
 
 
-    gitList: function () {
+     rander: function () {
+         let parent = document.getElementById('parent');
+        //  let h3 =document.createElementNS('h3');
+        //  parent.appendChild(h3);
+        //  h3.textContent=(`${this.localName}`);
 
-        let ul = document.createElement('ul');
+        
+
+         let ul = document.createElement('ul');
+         parent.appendChild(ul);
 
         //  Seattle.appendChild(ul)
 
         for (let i = 0; i < hours.length; i++) {
 
-            // if (i=13){
-
-            //     console.log(Seattle.li.textContent=(`total ${Seattle.totalSeattle}`));
-            // }
-            // else {
+            
             let li = document.createElement('li');
             ul.appendChild(li);
 
-            li.textContent = (` ${hours[i]}:${Paris.multiplyrandomcoustmerParis[i]} cookies 
+            li.textContent = (` ${hours[i]}:${Paris.multiplyrandomcoustmer[i]} cookies 
                       `);
-            console.log(li);
-
-
-
-        }
+            console.log(li); }
+            
+            // let totalli =document.createElementNS('li');
+            // ul.appendChild(totalli);
+            // totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -334,10 +331,10 @@ let  Paris = {
 }
 
 
-Paris.GitRandomcoustmerParis();
-Paris.GitMultiplyrandomcoustmerParis();
-Paris.gitTotalParis();
-Paris.gitList();
+Paris.GitRandomcoustmer();
+Paris.GitMultiplyrandomcoustmer();
+Paris.gitTotal();
+Paris.rander();
 console.log(Paris);
 
 
@@ -360,63 +357,68 @@ console.log(Paris);
 
 
 
-let  Lima = {
-    maxLima:16,
-    minLima: 2,
-    avgLima: 4.6,
-    randomcoustmerLima: [],
-    multiplyrandomcoustmerLima: [],
-    totalLima: 0,
-    list: [],
+
+let  Lima= {	
+    localName:'Lima',
+    maxCoustomer: 16,
+    minCoustomer:2,
+    avgCookies: 4.6,
+    randomcoustmer: [],
+    multiplyrandomcoustmer: [],
+    total: 0,
+   
 
 
 
-    GitRandomcoustmerLimas: function () {
-        for (let i = 0; i < hours.length; i++) { this.randomcoustmerLima.push(randomNumber(this.minLima, this.maxLima)); }
-        console.log(this.randomcoustmerLima);
+    GitRandomcoustmer: function () {
+        for (let i = 0; i < hours.length; i++) { this.randomcoustmer.push(randomNumber(this.minCoustomer, this .  maxCoustomer)); }
+        console.log(this.randomcoustmer);
     },
 
 
 
-    GitMultiplyrandomcoustmerLima: function () {
-        for (let i = 0; i < this.randomcoustmerLima.length; i++) { this.multiplyrandomcoustmerLima.push(Math.floor(this.randomcoustmerLima[i] * this.avgLima)); }
-        console.log(this.multiplyrandomcoustmerLima);
+    GitMultiplyrandomcoustmer: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) { this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies)); }
+        console.log(this.multiplyrandomcoustmer);
     },
 
 
 
 
-    gitTotalLima: function () {
-        for (let i = 0; i < this.randomcoustmerLima.length; i++) {
+    gitTotal: function () {
+        for (let i = 0; i < this.randomcoustmer.length; i++) {
 
-            this.totalLima = this.totalLima + this.randomcoustmerLima[i]
+            this.total = this.total + this.randomcoustmer[i]
         }
     },
 
 
-    gitList: function () {
+     rander: function () {
+         let parent = document.getElementById('parent');
+        //  let h3 =document.createElementNS('h3');
+        //  parent.appendChild(h3);
+        //  h3.textContent=(`${this.localName}`);
 
-        let ul = document.createElement('ul');
+        
+
+         let ul = document.createElement('ul');
+         parent.appendChild(ul);
 
         //  Seattle.appendChild(ul)
 
         for (let i = 0; i < hours.length; i++) {
 
-            // if (i=13){
-
-            //     console.log(Seattle.li.textContent=(`total ${Seattle.totalSeattle}`));
-            // }
-            // else {
+            
             let li = document.createElement('li');
             ul.appendChild(li);
 
-            li.textContent = (` ${hours[i]}:${Lima.multiplyrandomcoustmerLima[i]} cookies 
+            li.textContent = (` ${hours[i]}:${Lima.multiplyrandomcoustmer[i]} cookies 
                       `);
-            console.log(li);
-
-
-
-        }
+            console.log(li); }
+            
+            // let totalli =document.createElementNS('li');
+            // ul.appendChild(totalli);
+            // totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -424,11 +426,30 @@ let  Lima = {
 }
 
 
-Lima.GitRandomcoustmerLimas();
-Lima.GitMultiplyrandomcoustmerLima();
-Lima.gitTotalLima();
-Lima.gitList();
+Lima.GitRandomcoustmer();
+Lima.GitMultiplyrandomcoustmer();
+Lima.gitTotal();
+Lima.rander();
 console.log(Lima);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
