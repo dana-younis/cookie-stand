@@ -34,18 +34,18 @@ let Seattle = {
 
 
     gitTotal: function () {
-        for (let i = 0; i < this.randomcoustmer.length; i++) {
+        for (let i = 0; i < this. multiplyrandomcoustmer.length; i++) {
 
-            this.total = this.total + this.randomcoustmer[i]
+            this.total = this.total + this. multiplyrandomcoustmer[i]
         }
     },
 
 
      rander: function () {
          let parent = document.getElementById('parent');
-        //  let h3 =document.createElementNS('h3');
-        //  parent.appendChild(h3);
-        //  h3.textContent=(`${this.localName}`);
+         let h3 =document.createElement('h3');
+          parent.appendChild(h3);
+          h3.textContent=(`${this.localName}`);
 
         
 
@@ -64,9 +64,9 @@ let Seattle = {
                       `);
             console.log(li); }
             
-            // let totalli =document.createElementNS('li');
-            // ul.appendChild(totalli);
-            // totalli.textContent=(`total: ${this.total}`)
+             let totalli =document.createElement('li');
+             ul.appendChild(totalli);
+             totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -120,18 +120,18 @@ let Tokyo = {
 
 
     gitTotal: function () {
-        for (let i = 0; i < this.randomcoustmer.length; i++) {
+        for (let i = 0; i < this. multiplyrandomcoustmer.length; i++) {
 
-            this.total = this.total + this.randomcoustmer[i]
+            this.total = this.total + this. multiplyrandomcoustmer[i]
         }
     },
 
 
      rander: function () {
          let parent = document.getElementById('parent');
-        //  let h3 =document.createElementNS('h3');
-        //  parent.appendChild(h3);
-        //  h3.textContent=(`${this.localName}`);
+         let h3 =document.createElement('h3');
+         parent.appendChild(h3);
+          h3.textContent=(`${this.localName}`);
 
         
 
@@ -150,9 +150,9 @@ let Tokyo = {
                       `);
             console.log(li); }
             
-            // let totalli =document.createElementNS('li');
-            // ul.appendChild(totalli);
-            // totalli.textContent=(`total: ${this.total}`)
+           let totalli =document.createElement('li');
+            ul.appendChild(totalli);
+             totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -207,18 +207,18 @@ let Dubai = {
 
 
     gitTotal: function () {
-        for (let i = 0; i < this.randomcoustmer.length; i++) {
+        for (let i = 0; i < this. multiplyrandomcoustmer.length; i++) {
 
-            this.total = this.total + this.randomcoustmer[i]
+            this.total = this.total + this. multiplyrandomcoustmer[i]
         }
     },
 
 
      rander: function () {
          let parent = document.getElementById('parent');
-        //  let h3 =document.createElementNS('h3');
-        //  parent.appendChild(h3);
-        //  h3.textContent=(`${this.localName}`);
+          let h3 =document.createElement('h3');
+          parent.appendChild(h3);
+          h3.textContent=(`${this.localName}`);
 
         
 
@@ -237,9 +237,9 @@ let Dubai = {
                       `);
             console.log(li); }
             
-            // let totalli =document.createElementNS('li');
-            // ul.appendChild(totalli);
-            // totalli.textContent=(`total: ${this.total}`)
+             let totalli =document.createElement('li');
+             ul.appendChild(totalli);
+              totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -291,18 +291,18 @@ let  Paris= {
 
 
     gitTotal: function () {
-        for (let i = 0; i < this.randomcoustmer.length; i++) {
+        for (let i = 0; i < this. multiplyrandomcoustmer.length; i++) {
 
-            this.total = this.total + this.randomcoustmer[i]
+            this.total = this.total + this. multiplyrandomcoustmer[i]
         }
     },
 
 
      rander: function () {
          let parent = document.getElementById('parent');
-        //  let h3 =document.createElementNS('h3');
-        //  parent.appendChild(h3);
-        //  h3.textContent=(`${this.localName}`);
+         let h3 =document.createElement('h3');
+          parent.appendChild(h3);
+          h3.textContent=(`${this.localName}`);
 
         
 
@@ -321,9 +321,9 @@ let  Paris= {
                       `);
             console.log(li); }
             
-            // let totalli =document.createElementNS('li');
-            // ul.appendChild(totalli);
-            // totalli.textContent=(`total: ${this.total}`)
+             let totalli =document.createElement('li');
+             ul.appendChild(totalli);
+             totalli.textContent=(`total: ${this.total}`)
 
     },
 
@@ -386,25 +386,25 @@ let  Lima= {
 
 
     gitTotal: function () {
-        for (let i = 0; i < this.randomcoustmer.length; i++) {
+        for (let i = 0; i < this. multiplyrandomcoustmer.length; i++) {
 
-            this.total = this.total + this.randomcoustmer[i]
+            this.total = this.total + this. multiplyrandomcoustmer[i]
         }
     },
 
 
      rander: function () {
          let parent = document.getElementById('parent');
-        //  let h3 =document.createElementNS('h3');
-        //  parent.appendChild(h3);
-        //  h3.textContent=(`${this.localName}`);
+        let h3 =document.createElement('h3');
+          parent.appendChild(h3);
+          h3.textContent=(`${this.localName}`);
 
         
 
          let ul = document.createElement('ul');
          parent.appendChild(ul);
 
-        //  Seattle.appendChild(ul)
+        //   Seattle.appendChild(ul)
 
         for (let i = 0; i < hours.length; i++) {
 
@@ -416,9 +416,9 @@ let  Lima= {
                       `);
             console.log(li); }
             
-            // let totalli =document.createElementNS('li');
-            // ul.appendChild(totalli);
-            // totalli.textContent=(`total: ${this.total}`)
+             let totalli =document.createElement('li');
+             ul.appendChild(totalli);
+             totalli.textContent=(`total: ${this.total}`)
 
     },
 
