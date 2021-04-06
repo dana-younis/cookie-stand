@@ -105,6 +105,42 @@ makingHeader();
 
     
 // }
+function makingfooter() {
+
+
+    let footergRow = document.createElement('tr');
+    tableElement.appendChild(footergRow);
+
+    let firstFooterTh = document.createElement('th');
+        footergRow.appendChild(firstFooterTh);
+        firstFooterTh.textContent = 'TOTALS';
+        let totalOfTotal=0;
+       
+    for (let i = 0; i < hours.length; i++) {
+        let totalEachHour =0;
+        
+       
+        for (let j= 0; j <cities.length; j++) {
+            // console.log(hours[i]);
+            // console.log(cities[j]);
+          
+            totalEachHour+=cities[j].multiplyrandomcoustmer[i];
+            totalOfTotal+=cities[j].multiplyrandomcoustmer[i];
+        }
+             
+          let elementsTootl = document.createElement('th');
+          footergRow.appendChild(elementsTootl);
+          elementsTootl.textContent =totalEachHour;
+   
+        //   console.log(totalEachHour);
+    }
+
+          console.log(totalOfTotal)
+         let finalFooterth = document.createElement('th');
+         footergRow.appendChild(finalFooterth);
+      finalFooterth.textContent =totalOfTotal ;
+
+}
 
 
 
@@ -159,7 +195,7 @@ for (let i = 0; i < cities.length; i++) {
 }
 
 
-
+makingfooter();
 
 
 
