@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  img{
+    
+        float: left;
+        width: 18%;
+        padding: 5px;
+     
+  }
+  header{
+    display: inline;
+        width: 500px;
+      padding: 10px;
+      border: 5px solid gray;
+      outline: hsl(347, 96%, 48%) solid 12px;
+      text-decoration: overline;
+      font-size: 77px;
+      text-shadow: 3px 2px red;
+      margin-bottom:  4%;
+ 
