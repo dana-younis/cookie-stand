@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-table, th, td {
+table, th, td { background-color: #796d03;
+    color: white;
     border: 1px solid black;}
 
     header{
@@ -22,3 +23,17 @@ img{
           animation:fall 15s linear infinite ;
           animation-delay:-4s;
         }
+        
+a{
+    
+    padding: 11px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #690000;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
