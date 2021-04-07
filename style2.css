@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+table, th, td {
+    border: 1px solid black;}
+
+    header{
+        display: inline;
+            width:50px;
+          
+         
+          /* outline: hsl(347, 96%, 48%) solid 12px; */
+         
+          font-size: 20px;
+          text-shadow: 3px 2px red;
+          } 
+
+
+
+          
