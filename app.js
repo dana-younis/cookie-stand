@@ -218,7 +218,10 @@ function submitter(event) {
     for (let i = 0; i < cities.length; i++) {
 
 
-
+   
+     cities[i].randomcoustmer=[];
+     cities[i].multiplyrandomcoustmer=[];
+     cities[i].total=0;
         cities[i].GitRandomcoustmer();
         cities[i].GitMultiplyrandomcoustmer();
         //  cities[i].gitTotal();
