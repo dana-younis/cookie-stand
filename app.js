@@ -4,14 +4,6 @@ const hours = ['6am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm',
 function randomNumber(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
 
 
-
-
-
-
-
-
-
-
 let cities = [];
 
 let city1 = new Cookies('Seattle', 65, 23, 6.3);
@@ -45,16 +37,22 @@ Cookies.prototype.GitRandomcoustmer = function () {
 }
 
 Cookies.prototype.GitMultiplyrandomcoustmer = function () {
-    for (let i = 0; i < this.randomcoustmer.length; i++) { this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies)); }
-    console.log(this.multiplyrandomcoustmer);
-}
-
-Cookies.prototype.gitTotal = function () {
-    for (let i = 0; i < this.multiplyrandomcoustmer.length; i++) {
-
+    for (let i = 0; i < hours.length; i++) {
+        this.multiplyrandomcoustmer.push(Math.floor(this.randomcoustmer[i] * this.avgCookies));
         this.total = this.total + this.multiplyrandomcoustmer[i]
     }
+    console.log(this.multiplyrandomcoustmer);
+
 }
+
+//  Cookies.prototype.gitTotal = function () {
+
+
+//     for (let i = 0; i < this.multiplyrandomcoustmer.length; i++) {
+
+
+//     }
+// }
 
 // 
 
@@ -81,8 +79,8 @@ function makingHeader() {
     tableElement.appendChild(headingRow);
 
     let firstth = document.createElement('th');
-        headingRow.appendChild(firstth);
-        firstth.textContent = 'names';
+    headingRow.appendChild(firstth);
+    firstth.textContent = 'names';
 
 
     for (let i = 0; i < hours.length; i++) {
@@ -91,8 +89,8 @@ function makingHeader() {
         elements.textContent = hours[i]
     }
     let finalth = document.createElement('th');
-        headingRow.appendChild(finalth);
-        finalth.textContent = 'Daily Location Total';
+    headingRow.appendChild(finalth);
+    finalth.textContent = 'Daily Location Total';
 }
 makingHeader();
 
@@ -103,7 +101,7 @@ makingHeader();
 //     let row= footer.insertRow(0)
 
 
-    
+
 // }
 function makingfooter() {
 
@@ -112,33 +110,33 @@ function makingfooter() {
     tableElement.appendChild(footergRow);
 
     let firstFooterTh = document.createElement('th');
-        footergRow.appendChild(firstFooterTh);
-        firstFooterTh.textContent = 'TOTALS';
-        let totalOfTotal=0;
-       
+    footergRow.appendChild(firstFooterTh);
+    firstFooterTh.textContent = 'TOTALS';
+    let totalOfTotal = 0;
+
     for (let i = 0; i < hours.length; i++) {
-        let totalEachHour =0;
-        
-       
-        for (let j= 0; j <cities.length; j++) {
+        let totalEachHour = 0;
+
+
+        for (let j = 0; j < cities.length; j++) {
             // console.log(hours[i]);
             // console.log(cities[j]);
-          
-            totalEachHour+=cities[j].multiplyrandomcoustmer[i];
-            totalOfTotal+=cities[j].multiplyrandomcoustmer[i];
+
+            totalEachHour += cities[j].multiplyrandomcoustmer[i];
+            totalOfTotal += cities[j].multiplyrandomcoustmer[i];
         }
-             
-          let elementsTootl = document.createElement('th');
-          footergRow.appendChild(elementsTootl);
-          elementsTootl.textContent =totalEachHour;
-   
+
+        let elementsTootl = document.createElement('th');
+        footergRow.appendChild(elementsTootl);
+        elementsTootl.textContent = totalEachHour;
+
         //   console.log(totalEachHour);
     }
 
-          console.log(totalOfTotal)
-         let finalFooterth = document.createElement('th');
-         footergRow.appendChild(finalFooterth);
-      finalFooterth.textContent =totalOfTotal ;
+    console.log(totalOfTotal)
+    let finalFooterth = document.createElement('th');
+    footergRow.appendChild(finalFooterth);
+    finalFooterth.textContent = totalOfTotal;
 
 }
 
@@ -152,7 +150,7 @@ function makingfooter() {
 
 
 
-Cookies.prototype.rander= function () {
+Cookies.prototype.rander = function () {
 
     let shopRow = document.createElement('tr');
     tableElement.appendChild(shopRow);
@@ -161,42 +159,95 @@ Cookies.prototype.rander= function () {
     shopRow.appendChild(firstd);
     firstd.textContent = this.localName;
 
-    
-   
-    
-  
 
-    for (let i= 0; i< hours.length; i++) {
+
+
+
+
+    for (let i = 0; i < hours.length; i++) {
         // multiplyrandomcoustmer
         let elements = document.createElement('td');
         shopRow.appendChild(elements);
-        elements.textContent =this.multiplyrandomcoustmer[i]
-        
-        
+        elements.textContent = this.multiplyrandomcoustmer[i]
+
+
     }
     let finaltd = document.createElement('td');
-        shopRow.appendChild(finaltd);
-        finaltd.textContent = this.total;
+    shopRow.appendChild(finaltd);
+    //   this.gitTotal();
+    finaltd.textContent = this.total;
 
 
-        
+
 
 }
 
 
-    
+let CookiesForm = document.getElementById('CookiesForm');
+CookiesForm.addEventListener('submit', submitter);
+
+function submitter(event) {
+
+    event.preventDefault();
+
+    // elements="";
+
+
+    console.log(event);
+    let localName = event.target.localName.value;
+    console.log(localName);
+
+    let maxCoustomer = event.target.maxCoustomer.value;
+    console.log(maxCoustomer);
+
+    let minCoustomer = event.target.minCoustomer.value;
+    console.log(minCoustomer);
+
+    let avgCookies = event.target.avgCookies.value;
+    console.log(avgCookies);
+
+    let addCookies = new Cookies(localName, maxCoustomer, minCoustomer, avgCookies)
+    console.log(addCookies);
+
+    tableElement.textContent = "";
+
+    console.log(cities);
+
+    makingHeader();
+
+    for (let i = 0; i < cities.length; i++) {
+
+
+   
+     cities[i].randomcoustmer=[];
+     cities[i].multiplyrandomcoustmer=[];
+     cities[i].total=0;
+        cities[i].GitRandomcoustmer();
+        cities[i].GitMultiplyrandomcoustmer();
+        //  cities[i].gitTotal();
+
+        cities[i].rander();
+
+    }
+
+    makingfooter();
+    console.log(cities);
+}
+
+
+
 
 for (let i = 0; i < cities.length; i++) {
     cities[i].GitRandomcoustmer();
     cities[i].GitMultiplyrandomcoustmer();
-    cities[i].gitTotal();
+    //  cities[i].gitTotal();
     cities[i].rander();
-    
 }
 
 
-makingfooter();
 
+
+makingfooter();
 
 
 
