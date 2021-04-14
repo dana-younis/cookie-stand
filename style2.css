@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    background-color: rgba(214, 131, 71, 0.623);
 }
 
 table, th, td { background-color: #796d03;
